@@ -2,8 +2,10 @@
 
 Policy-gated Pinterest evidence and publication-plan connector for AoA.
 
-Phase 0 is an offline, policy-first skeleton. It makes no live API calls,
-contains no credentials, and cannot publish content.
+[Privacy Policy](PRIVACY.md)
+
+Phase 1 prepares a bounded Pinterest API v5 read path for an approved owner app.
+It keeps credentials outside Git and cannot publish content.
 
 ## Owned here
 
@@ -28,6 +30,15 @@ Official documentation: https://developers.pinterest.com/docs/api/v5/
 API terms, scopes, quotas, review requirements, and pricing can change. Recheck
 the official documentation before implementing or admitting a live adapter.
 
+## Connect the owner account
+
+Pinterest requires a business account, verified email, accepted developer terms,
+and an approved Trial-access application before it exposes a test token. See
+[`docs/SETUP_PINTEREST.md`](docs/SETUP_PINTEREST.md).
+
+After approval, the minimum read scopes are `user_accounts:read`, `boards:read`,
+and `pins:read`.
+
 ## Bootstrap checks
 
 ```bash
@@ -38,5 +49,5 @@ pytest
 aoa-pinterest doctor --json
 ```
 
-A green bootstrap proves only the source skeleton. It does not prove API access,
-OAuth, deployment, publication, or consumer acceptance.
+A green bootstrap proves only the prepared source adapter. It does not prove API
+approval, a valid token, deployment, publication, or consumer acceptance.

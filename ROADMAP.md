@@ -9,10 +9,12 @@
 
 ## Phase 1 — evidence adapter
 
-- [ ] reverify official API, scopes, quotas, terms, and review path
-- [ ] add OAuth or app-auth flow using operator-local secret storage
-- [ ] implement bounded reads and normalized evidence packets
-- [ ] add synthetic fixtures and policy/negative tests
+- [x] reverify official API, scopes, quotas, terms, and review path
+- [x] add owner-local test-token bootstrap with strict secret storage
+- [x] implement bounded account/Pin reads and normalized evidence packets
+- [x] add synthetic policy/negative tests
+- [ ] obtain Trial approval and prove the owner-account read path
+- [ ] add full Authorization Code OAuth and refresh only when needed beyond owner bootstrap
 
 ## Phase 2 — preparation
 
