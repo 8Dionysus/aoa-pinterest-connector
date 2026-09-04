@@ -4,9 +4,10 @@ Provider: Pinterest
 
 Policy snapshot: 2026-09-04. Reverify all live conditions before adapter work.
 
-## Planned official surfaces
+## Official surfaces
 
-- read: authorized_pins
+- read: authorized account
+- read: authorized_pins (implemented, unadmitted)
 - read: boards
 - read: board_sections
 - read: trends

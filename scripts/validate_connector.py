@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the symmetric Phase 0 connector source surface."""
+"""Validate the symmetric Pinterest connector source surface."""
 
 from __future__ import annotations
 
@@ -19,6 +19,7 @@ REQUIRED = (
     "CHANGELOG.md",
     "CHARTER.md",
     "LICENSE",
+    "PRIVACY.md",
     "README.md",
     "ROADMAP.md",
     "STATUS.md",
@@ -33,6 +34,7 @@ REQUIRED = (
     "connector/schemas/publication_receipt.schema.json",
     "docs/ARCHITECTURE.md",
     "docs/RUNTIME_CONTRACT.md",
+    "docs/SETUP_PINTEREST.md",
     "docs/decisions/README.md",
     "docs/decisions/AOA-PINTEREST-D-0001-independent-provider-owner.md",
     "evals/README.md",
@@ -41,7 +43,14 @@ REQUIRED = (
     "src/aoa_pinterest_connector/__init__.py",
     "src/aoa_pinterest_connector/__main__.py",
     "src/aoa_pinterest_connector/cli.py",
+    "src/aoa_pinterest_connector/client.py",
+    "src/aoa_pinterest_connector/config.py",
+    "src/aoa_pinterest_connector/evidence.py",
     "tests/test_cli.py",
+    "tests/test_client.py",
+    "tests/test_config.py",
+    "tests/test_evidence.py",
+    "assets/app-icon.png",
 )
 FORBIDDEN_NAMES = {".env", "client_secret.json", "credentials.json", "token.json"}
 FORBIDDEN_SUFFIXES = {".mp4", ".mov", ".mkv", ".webm", ".zip", ".sqlite", ".db"}
